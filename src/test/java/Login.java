@@ -6,6 +6,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class Login {
 
     private static Playwright playwright;
@@ -31,8 +33,13 @@ public class Login {
         page.navigate("https://www.saucedemo.com/");
 
         page.fill("#user-name", "standard_user");
+        page.fill("#password", "secret_sauce");
+        page.click("#login-button");
 
-        Thread.sleep(5000);
+        boolean isLoggedIn = page.isVisible(".inventory_listNkosi");
+        assertTrue(isLoggedIn, "Login was not successful!");
+
+        Thread.sleep(2000);
 
         context.close();
     }
