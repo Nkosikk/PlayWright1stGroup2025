@@ -36,5 +36,3 @@ build/
 .idea/
 ### Mac OS ###
 .DS_Store
-
-git remote add origin https://github.com/Nkosikk/PlayWright1stGroup20251.git
