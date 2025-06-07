@@ -11,6 +11,9 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/
+
+git status
 
 ### Eclipse ###
 .apt_generated
