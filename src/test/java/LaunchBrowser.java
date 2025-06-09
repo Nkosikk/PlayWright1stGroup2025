@@ -12,10 +12,6 @@ public class LaunchBrowser {
             page.fill("#user-name", "standard_user");
 
             Thread.sleep(5000);
-
-
-
-
         }
     }
 

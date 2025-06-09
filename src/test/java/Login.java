@@ -36,7 +36,7 @@ public class Login {
         page.fill("#password", "secret_sauce");
         page.click("#login-button");
 
-        boolean isLoggedIn = page.isVisible(".inventory_listkosi");
+        boolean isLoggedIn = page.isVisible(".inventory_list");
         assertTrue(isLoggedIn, "Login was not successful!");
 
         Thread.sleep(2000);
