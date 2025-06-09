@@ -19,12 +19,6 @@ public class Login {
         browser = playwright.chromium().launch(new com.microsoft.playwright.BrowserType.LaunchOptions().setHeadless(false));
     }
 
-    @AfterAll
-    static void tearDown() {
-       browser.close();
-       playwright.close();
-    }
-
     @Test
     void testLogin() throws InterruptedException {
         BrowserContext context = browser.newContext();
@@ -41,6 +35,12 @@ public class Login {
 
         Thread.sleep(2000);
 
-        context.close();
+//        context.close();
     }
+    @AfterAll
+    static void tearDown() {
+       browser.close();
+       playwright.close();
+    }
+
 }
