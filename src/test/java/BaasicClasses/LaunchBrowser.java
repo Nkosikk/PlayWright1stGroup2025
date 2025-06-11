@@ -1,4 +1,4 @@
-package BasicClasses;
+package BaasicClasses;
 
 import com.microsoft.playwright.*;
 
