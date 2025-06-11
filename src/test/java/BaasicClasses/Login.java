@@ -1,4 +1,7 @@
-import com.microsoft.playwright.*;
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,7 +16,13 @@ public class Login {
     @BeforeAll
     static void setup() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new com.microsoft.playwright.BrowserType.LaunchOptions().setHeadless(false));
+    }
+
+    @AfterAll
+    static void tearDown() {
+       browser.close();
+       playwright.close();
     }
 
     @Test
@@ -27,17 +36,11 @@ public class Login {
         page.fill("#password", "secret_sauce");
         page.click("#login-button");
 
-        boolean isLoggedIn = page.isVisible(".inventory_list");
+        boolean isLoggedIn = page.isVisible(".inventory_listkosi");
         assertTrue(isLoggedIn, "Login was not successful!");
 
         Thread.sleep(2000);
 
-//        context.close();
+        context.close();
     }
-    @AfterAll
-    static void tearDown() {
-       browser.close();
-       playwright.close();
-    }
-
 }
