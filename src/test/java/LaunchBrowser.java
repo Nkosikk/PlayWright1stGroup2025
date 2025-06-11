@@ -14,6 +14,4 @@ public class LaunchBrowser {
             Thread.sleep(5000);
         }
     }
-
-
 }
