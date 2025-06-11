@@ -11,8 +11,15 @@ public class LaunchBrowser {
 
             page.fill("#user-name", "standard_user");
 
+
+            page.fill("#password", "secret_sauce");
+
             Thread.sleep(5000);
 
+            page.click("#login-button");
+
+
+            Thread.sleep(5000);
 
 
 
