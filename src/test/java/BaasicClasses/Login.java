@@ -1,3 +1,5 @@
+package BaasicClasses;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
@@ -36,8 +38,8 @@ public class Login {
         page.fill("#password", "secret_sauce");
         page.click("#login-button");
 
-        boolean isLoggedIn = page.isVisible(".inventory_list");
-        assertTrue(isLoggedIn, "Login was not successful!");
+        boolean isLoggedIn = page.isVisible(".inventory_listkosi");
+        assertTrue(isLoggedIn, "BasicClasses.Login was not successful!");
 
         Thread.sleep(2000);
 
