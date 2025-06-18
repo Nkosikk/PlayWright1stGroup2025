@@ -25,6 +25,9 @@ public class LoginPage {
         page.fill(passwordID, password);
     }
 
+    public void clickLoginButton() {
+        page.click(loginButtonID);
+    }
 
 
 }
