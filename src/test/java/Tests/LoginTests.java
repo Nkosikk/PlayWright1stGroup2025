@@ -13,7 +13,20 @@ public class LoginTests extends BaseTest {
         String Actual_title = loginPage.getLoginPageTile();
         Assert.assertEquals(Actual_title, EXPECTED_LOGIN_PAGE_TITLE, "Title does not match");
         Thread.sleep(2000); // Sleep for 2 seconds to observe the title
+
+
     }
+
+    @Test
+    public void verifyLoginFunctionality() throws InterruptedException {
+        //input username
+        loginPage.enterUsername("standard_user");
+        //input password
+        loginPage.enterPassword("secret_sauce");
+
+        Thread.sleep(2000); // Sleep for 2 seconds to observe the result
+    }
+
 
 
 }
