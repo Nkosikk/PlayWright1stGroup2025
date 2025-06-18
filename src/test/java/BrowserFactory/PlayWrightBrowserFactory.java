@@ -46,6 +46,7 @@ public class PlayWrightBrowserFactory {
     }
 
     public Page getPage() {
+
         return page;
     }
 

@@ -17,12 +17,17 @@ public class LoginPage {
 
         return page.title();
     }
+
     public void enterUsername(String username) {
         page.fill(usernameID, username);
     }
 
     public void enterPassword(String password) {
         page.fill(passwordID, password);
+    }
+
+    public void clickLogin() {
+        page.click(loginButtonID);
     }
 
 

@@ -4,7 +4,7 @@ import Base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Constants.AppConstants.EXPECTED_LOGIN_PAGE_TITLE;
+import static Constants.AppConstants.*;
 
 public class LoginTests extends BaseTest {
 
@@ -14,17 +14,18 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(Actual_title, EXPECTED_LOGIN_PAGE_TITLE, "Title does not match");
         Thread.sleep(2000); // Sleep for 2 seconds to observe the title
 
-
     }
 
-    @Test
+    @Test(groups = {"LoginTests.verifyLoginFunctionality"})
     public void verifyLoginFunctionality() throws InterruptedException {
         //input username
-        loginPage.enterUsername("standard_user");
+        loginPage.enterUsername(UserName1);
         //input password
-        loginPage.enterPassword("secret_sauce");
+        loginPage.enterPassword(UserPassword);
 
         Thread.sleep(2000); // Sleep for 2 seconds to observe the result
+        loginPage.clickLogin();
+        Thread.sleep(4000);
     }
 
 
