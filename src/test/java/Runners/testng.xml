@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/nkosicele/Documents/NewCLassProject/PlayWright1stGroup2025">
         <classes>
-            <class name="BaasicClasses.Login">
+            <class name="Tests.LoginTests">
                 <methods>
                     <include name="testLogin"/>
                 </methods>
