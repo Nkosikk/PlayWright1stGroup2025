@@ -4,18 +4,16 @@ import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestNGListener;
 import org.testng.ITestResult;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ExtentReportLister implements ITestListener {
+public class ExtentReportListener implements ITestListener {
 
-    private static final String OUTPUT_FOLDER = "target/ExtentReports/";
+    private static final String OUTPUT_FOLDER = "test-output/ExtentReports/";
     private static final String FILE_NAME = "ExtentReport.html";
 
     private static ExtentReports extent = init();
