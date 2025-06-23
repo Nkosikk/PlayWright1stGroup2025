@@ -2,6 +2,7 @@ package Base;
 
 import BrowserFactory.PlayWrightBrowserFactory;
 import Pages.LoginPage;
+import Pages.SelectProduct;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import org.testng.annotations.AfterTest;
@@ -15,6 +16,7 @@ public class BaseTest {
     protected Page page;
     protected LoginPage loginPage;
     Properties prop;
+    protected SelectProduct selectProduct;
 
     @BeforeTest
     public void setup() {
