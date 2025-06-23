@@ -24,8 +24,11 @@ public class LoginTests extends BaseTest {
         //input password
         loginPage.enterPassword("secret_sauce");
 
+        loginPage.clickLoginButton();
+
         Thread.sleep(2000); // Sleep for 2 seconds to observe the result
     }
+
 
 
 
