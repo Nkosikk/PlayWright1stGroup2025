@@ -16,7 +16,8 @@ public class PlayWrightBrowserFactory {
     Browser browser;
     Properties prop;
 
-    public void initBrowser(Properties prop) {
+    public void initBrowser(Properties
+                                    aprop) {
         String browserName = prop.getProperty("browser").trim();
         Playwright playwright = Playwright.create();
 
@@ -50,7 +51,7 @@ public class PlayWrightBrowserFactory {
     }
 
     public void closeBrowser() {
-        if (browser != null) {
+        if (browser != null) {//its not null, meaning its active. doing something(you closing it in Active)
             browser.close();
         }
     }
