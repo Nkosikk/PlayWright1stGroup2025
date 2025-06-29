@@ -17,7 +17,7 @@ public class PlayWrightBrowserFactory {
     Properties prop;
 
     public void initBrowser(Properties
-                                    aprop) {
+                                    prop) {
         String browserName = prop.getProperty("browser").trim();
         Playwright playwright = Playwright.create();
 
