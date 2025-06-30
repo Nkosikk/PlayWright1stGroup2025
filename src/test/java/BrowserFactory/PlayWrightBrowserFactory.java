@@ -35,5 +35,6 @@ public class PlayWrightBrowserFactory {
         }
         browserContext = browser.newContext();
         page = browserContext.newPage();
+      page.navigate(prop.getProperty("url").trim());
     }
 }
