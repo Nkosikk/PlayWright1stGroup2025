@@ -50,10 +50,10 @@ public class PlayWrightBrowserFactory {
     }
 
     public void closeBrowser() {
-        if (browser != null) {
-            browser.close();
+        //if (browser != null) {
+            //browser.close();
         }
-    }
+    //}
 
     public Properties init_prop() {
         try {

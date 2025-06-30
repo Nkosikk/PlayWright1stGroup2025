@@ -28,6 +28,17 @@ public class LoginTests extends BaseTest {
 
         Thread.sleep(2000); // Sleep for 2 seconds to observe the result
     }
+    @Test (dependsOnMethods = "verifyLoginFunctionality")
+    public void selectItemFromHomePage() throws InterruptedException {
+        homePage.addItemToCart();
+        Thread.sleep(2000); // Sleep for 2 seconds to observe the result
+        String cartItemCount = homePage.getCartItemCount();
+        Assert.assertEquals(cartItemCount, "1", "Cart item count does not match");
+        homePage.navigateToCart();
+        Thread.sleep(2000); // Sleep for 2 seconds to observe the result
+        String pageTitle = homePage.getPageTitle();
+        //Assert.assertTrue(pageTitle.contains("Your Cart"), "Page title does not contain 'Your Cart'");
+    }
 
 
 

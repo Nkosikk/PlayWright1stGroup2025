@@ -1,6 +1,7 @@
 package Base;
 
 import BrowserFactory.PlayWrightBrowserFactory;
+import Pages.HomePage;
 import Pages.LoginPage;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
@@ -14,6 +15,7 @@ public class BaseTest {
     PlayWrightBrowserFactory pf;
     protected Page page;
     protected LoginPage loginPage;
+    protected HomePage homePage;
     Properties prop;
 
     @BeforeTest
@@ -23,6 +25,7 @@ public class BaseTest {
         pf.initBrowser(prop);
         page = pf.getPage();
         loginPage = new LoginPage(page);
+        homePage = new HomePage(page); // Initialize HomePage with the same page instance
     }
 
     @AfterTest
