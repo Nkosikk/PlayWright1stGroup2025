@@ -28,6 +28,4 @@ public class LoginTests extends BaseTest {
         Thread.sleep(4000);
     }
 
-
-
 }

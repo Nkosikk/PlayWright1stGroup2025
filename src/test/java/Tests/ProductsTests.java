@@ -18,4 +18,16 @@ public class ProductsTests extends BaseTest {
         Thread.sleep(3000); // Sleep for 3 seconds to observe the title
 
     }
+
+    @Description("Add Items to Cart")
+    @Test
+    public  void AddingItemsToCart() throws InterruptedException {
+        productsPage.viewItem("Sauce Labs Backpack");
+        productsPage.addItemToCart();
+        Thread.sleep(3000); // Sleep for 3 seconds to observe the items added
+        Assert.assertTrue(productsPage.addToCart.isEmpty(), "Item was not added to cart successfully");
+        Thread.sleep(3000);
+        productsPage.backToProducts();
+        productsPage.getProductsPageTile();
+    }
 }
