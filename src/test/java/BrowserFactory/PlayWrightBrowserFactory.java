@@ -63,6 +63,7 @@ public class PlayWrightBrowserFactory {
             prop.load(ip);
 
         } catch (Exception e) {
+
             e.printStackTrace();
         }
         return prop;

@@ -2,7 +2,8 @@ package Pages;
 
 import com.microsoft.playwright.Page;
 
-public class LoginPage {
+public class
+LoginPage {
     Page page;
     private String usernameID = "#user-name";
     private String passwordID = "#password";
