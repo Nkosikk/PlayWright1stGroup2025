@@ -33,8 +33,8 @@ public class PlayWrightBrowserFactory {
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browserName);
         }
-        browserContext = browser.newContext();
-        page = browserContext.newPage();
+        browserContext = browser.newContext();//creating a new browse context
+        page = browserContext.newPage();//creating a new page(the browsercontext has new page)
       page.navigate(prop.getProperty("url").trim());
     }
 }
